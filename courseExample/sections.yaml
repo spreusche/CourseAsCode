@@ -1,0 +1,34 @@
+sections:
+  - name: Kanto Region
+    activities:
+      - type: file
+        src: kantoPokemon.jpg
+        config: aFileConfig.yaml
+      - type: label
+        src: PokemonIntro.md
+        config: aLabelConfig.yaml
+      - type: page
+        src: PokeInfo.md
+      - type: quiz
+        src: quiz.json
+      - type: assign
+        src: PokeAssignment.yaml
+        config: aAssignConfig.yaml
+      - type: quiz
+        src: PokeCoding.json
+        config: aQuizConfig.yaml
+
+  - name: emptySection
+
+  - name: PokeForum
+    activities:
+      - type: forum
+        src: PokemonForum23.yaml
+        config: aForumConfig.yaml
+      - type: file
+        src: kantoPokemon.jpg
+      - type: label
+        src: pokeLabel.md
+        config: aLabelConfig.yaml
+
+

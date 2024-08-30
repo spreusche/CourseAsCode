@@ -1,0 +1,43 @@
+# - GENERAL - #
+courseName: PokemonCourse
+category: miscellaneous 
+summary: We will learn Pokemon
+visibility: Show
+startDate: 31-01-2023 23:59
+endDate: 31-08-2025 23:59
+IDnumber: "" # default: empty
+description: Pokemon and more Pokemon
+
+# - COURSE FORMAT - #
+assessment: Some assessment of the course I guess
+assessmentCriteria: Some criteria for the assessment
+showHeader: Yes #
+showCourseImage: No #
+showTeachers: Yes #
+numTeachersInBox: 2 #
+teacherBoxTitle: Trainers #
+showOverview: Yes #
+showInfobox: Yes #
+
+# - APPEARANCE - #
+language: en
+numAnnouncements: 5 # 0-10
+showGradebook: Yes #
+showActivityReports: Yes #
+showActivityDates: Yes #
+
+# - FILES AND UPLOADS - #
+maxUploadSize: 500 MB # 10 KB - 2 GB
+legacyFiles: Yes # default yes
+
+# - COMPLETION TRACKING - #
+enableCompletionTracking: No #
+
+# - GROUPS - #
+groupMode: 0 # 0: no groups - 1: separate groups - 2: visible groups
+forceGroupMode: No
+defaultGrouping: No
+
+
+
+

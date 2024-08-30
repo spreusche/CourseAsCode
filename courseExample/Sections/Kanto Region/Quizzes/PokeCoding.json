@@ -1,0 +1,20 @@
+{
+    "name": "PokemonCoding",
+    "intro": "Hello Wor..Pokemon!!",
+    "questions" : [{
+        "title": "Print Hello Pokemon",
+        "type": "coderunner",
+        "coderunnertype": "java_program",
+        "question": "write a hello world",
+        "answerPreload": "class prog{\npublic static void main(String[] args){\n//do smth here\n }\n}",
+        "answer": "class HW{\npublic static void main(String[] args){\nSystem.out.println(\"Hello Pokemon\");\n }\n}",
+        "tests":[
+            {
+                "testcode": "the test case",
+                "expected": "Hello Pokemon"
+            }
+        ],
+        "feedback": "Some nice comment :)"
+    }
+    ]
+}

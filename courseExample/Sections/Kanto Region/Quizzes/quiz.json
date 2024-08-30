@@ -1,0 +1,35 @@
+{
+  "name": "PokeQuiz",
+  "intro": "some intro for the quiz",
+  "questions": [
+    {
+      "title": "Who's that Pokemon?",
+      "type": "multichoice",
+      "question": "It is yellow and electric type",
+      "answers": {
+        "correct": [
+          "Pikachu"
+        ],
+        "wrong": [
+          "Charizard",
+          "Ash",
+          "Diglet"
+        ]
+      },
+      "feedback": "Yay!!"
+    },
+    {
+      "title": "ESSAY QUESTION",
+      "type": "essay",
+      "question": "Write your essay",
+      "feedback": "Yay!!"
+    },
+    {
+      "title": "WILL THIS WORK?",
+      "type": "numeric",
+      "question": "1+1",
+      "answer": "2",
+      "feedback": "Yay!!"
+    }
+  ]
+}

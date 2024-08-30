@@ -1,0 +1,50 @@
+Main pseudocode for def create_full_course(new_course_dir):
+
+def create_full_course(new_course_dir):
+    # Step 1: Read course files
+    course_files = os.scandir(new_course_dir)
+
+
+    for entry in course_files:
+        # Process course files
+
+    # Step 2: Check necessary files
+    if order_yaml is None -> error
+    if config_yaml is None -> error
+    if sections_dir is None: -> error
+
+    # Step 3: Parse YAML
+    parse_yaml(new_course_dir + "/" + order_yaml.name)
+
+    # Step 4: Create directories
+    os.mkdir(course_creation_directory)
+    os.mkdir(activities_creation_directory)
+    os.mkdir(sections_creation_directory)
+    os.mkdir(course_created_directory)
+
+    # Step 5: Process each section
+    for section in sections_dir:
+        # create each section
+
+        # Step 6: Process activities for each of these sections
+        for file in current_section_files:
+            if file.is_dir():
+                # Process activity types: pages, labels, files, etc...
+                # Add the activity to the list of activities from that section
+
+        # Step 7: Add the section to the list of sections
+        sections.append(this_section)
+
+    # Step 8: Create course configuration and files
+    course_config = get_yaml(new_course_dir + "/" + config_yaml.name)
+
+
+    # Step 9: Generate activity and section files
+    create_activities_files(sections)
+    create_sections_files(sections)
+
+    # Step 10: Create the course and backup files
+    c = Course("1", "1", sections, course_config)
+    create_course_files(c)
+    course.create_xml(course_created_directory, c)
+    create_backup_files( c)

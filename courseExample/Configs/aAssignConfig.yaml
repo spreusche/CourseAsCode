@@ -1,0 +1,38 @@
+# Basic for every activity
+score: 10
+visible: true
+visibleoncoursepage: true
+showdescription: false
+
+# -- Assign specific configs
+alwaysshowdescription: true
+
+sendnotifications: true
+
+sendlatenotifications: true
+
+sendstudentnotifications: true
+
+additionalattempts: manual # manual, none, untilpass
+
+maxattempts: 1 # default is unlimited
+
+onlinetext: true
+
+wordlimit: 1234 #if not set then not enabled
+
+filesubmissions: true
+
+fileuploads: 12 # 0-20. Not set -> 1
+
+filetypes: any #any for any, otherwise: .zip,.md,.pdf (add extensions separated by a comma). Not set -> ""
+
+requiresubmit: false
+
+requiresubmissionstatement: true
+
+teamsubmission: false
+
+requireallteammembers: false
+
+

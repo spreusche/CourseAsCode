@@ -4,3 +4,6 @@
 /CREATED_COURSE2024
 /HTML_Basics
 /venv
+
+*.pyc
+*/.idea

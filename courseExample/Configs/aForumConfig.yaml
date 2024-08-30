@@ -1,0 +1,20 @@
+# Basic for every activity
+score: 10
+visible: true
+visibleoncoursepage: true
+showdescription: false
+
+# -- Forum specific configs
+
+type: single # general - single - blog - qanda - eachuser
+duedate: 10-03-2023 10:50h #dd-mm-yyyy hh:mmh or 0 for diasble
+cutoffdate: 10-03-2025 10:50h #dd-mm-yyyy hh:mmh
+maxattachments: 9 # 0 - 9
+forcesubscribe: 0 # 0-optional, 1-force, 2-auto, 3-suscription disabled
+trackingtype: 1
+warnafter: 12 # Warn student after N posts
+blockafter: 0 # Block student after N posts
+blockperiod: 0 # Students can be blocked after posting N amount of post in this period of time - 0 disable
+displaywordcount: 1 # 0 - no, 1 - yes
+lockdiscussionafter: 0
+grade_forum: 0

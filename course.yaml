@@ -1,0 +1,14 @@
+course: Structured Programming Lab
+program: bachelor business informatics
+semester: 1
+blocks_units:
+  - Fundamentals
+    - Hello_World
+    - Calculations
+    - Selection
+    - Iteration_I
+    - Iteration_II
+  - Basics
+  - Data Structures
+  - Exams
+

@@ -1,0 +1,189 @@
+@startuml
+hide empty members
+
+left to right direction
+'top to bottom direction
+
+title Moodle Course Object Model
+
+skinparam componentStyle uml2
+
+
+class Course{
++id: int
++context_id: int
++sections: Section[]
++config: Dict(yaml_configurations)
++name: String
++short_name: String
++format: String
+}
+
+class Section{
++id: int
++name: String
++summary: String
++sequence: String
++activities: Dict(Activities)
++number: int
++directory: String
++files: File[]
+}
+
+class Activity{
++module_id: int
++section_id: int
++module_name: String
++titlee: String
++directory: String
++intro: String
++content: String
++files: File[]
+}
+
+
+class File{
++module_id: int
++content_hash: String
++context_id: int
++name: String
++size: int
++type: String
++filee: DirEntry
++directory: String
+}
+
+class Quiz{
++id: int
++name: String
++questions: Question[]
+}
+
+
+class Label{
++linke: String
+}
+
+class Page{
++linke: String
+}
+
+class Question{
++id: int
++qtype: String
++titlee: String
++text: String
++feedback: String
+}
+
+class Question_multichoice{
++correct: String[]
++incorrect: String[]
+}
+
+class Question_coderunner{
++coderunner_type: String
++answer_preload: String
++answer: String
++tests: Test[]
+}
+
+class Coderunner_test{
++testcode: String
++expected: String
+}
+
+class Custom_Assignment{
++linkw: String
++config: Dict(yaml_configs)
++name: String
+}
+
+class Forum{
++linkw: String
+}
+
+
+class Assign_Service{
++parse_assign(assignment_path: String, id: int, section_id: int)
++assign_gen_files(act_directory: String)
++inforef_xml(act_directory: String, assign: Assignment)
++assign_xml(act_directory: String, assignment: Assignment)
+}
+
+class File_Service{
++generate_activity_gen_files(act_directory: String)
++inforef_xml(filee: File, resource_directory: String)
++resource_xml(resource_directory: String, file: File)
+}
+
+class Forum_Service{
++forum_xml(act_directory: String, forum: Forum)
++parse_forum(forum_yaml_path: String, forum_id: int, section_id: int)
++comments_xml(act_directory: String)
++competencies_xml(act_directory: String)
++completions_xml(act_directory: String)
++grading_xml(act_directory: String)
+}
+
+class Generic_files_Service{
++create_roles_xml(act_directory: String)
++create_calendar_xml(act_directory: String)
++create_grades_xml(act_directory: String)
++create_grade_hist_xml(act_directory: String)
++create_filters_xml(act_directory: String)
++create_inforef_xml(act_directory: String)
+}
+
+class Label_Service{
++create_label_xml(act_directory: String, activity: Activity)
+}
+
+class Page_Service{
++create_page_xml(act_directory: String, activity: Activity
+}
+
+class Quiz_Service{
++quiz_xml(act_directory: String, quiz: Quiz)
++generate_quiz_gen_files(act_directory: String)
++inforef_xml(act_directory: String, quiz: Quiz)
++questions_xml(course_directory: String, sections: Section[])
++parse_quiz(quiz_path: String, quiz_id: int, section_id: int, last_question_created_id: int)
++multichoice_xml(parent_tag: int, question: Question, quiz: Quiz, answerid: int)
++coderunner_xml(parent_tag: String, question: Question, quiz: Quiz, answerid: int)
+-category(question_categories_tag: String, name: String, category_id: int, context_level: int, ctxt_inst_id: int, quiz: Quiz)
+}
+
+abstract class Custom_Activity_Service{
++generate_xmls(act_directory, act)
++create_activity(assignment_path, id, section_id, config)
+}
+
+
+
+Activity <|-- Label
+Activity <|-- Page
+Activity <|-- Custom_Assignment
+Activity <|-- Forum
+Activity <|-- Quiz
+
+Quiz *-- "*" Question
+Question <|-- Question_coderunner
+Question <|-- Question_multichoice
+
+Question_coderunner *-- "*" Coderunner_test
+
+
+Course *-- "*" Section
+Section *-- "*" Activity
+Section *-- "*" File
+
+Label_Service <|-- Label : <<service>>
+Forum_Service <|-- Forum : <<service>>
+Assign_Service <|-- Custom_Assignment : <<service>>
+Page_Service <|-- Page : <<service>>
+Quiz_Service <|-- Quiz : <<service>>
+File_Service <|-- File: <<service>>
+
+Custom_Activity_Service <|-- Assign_Service : <<implements>>
+@enduml

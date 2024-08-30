@@ -1,0 +1,9 @@
+# Basic for every activity
+score: 10
+visible: true
+visibleoncoursepage: true
+showdescription: false
+
+# -- File specific configs
+intro: this is a picture showing pokemon
+display: Automatic #Automatic, Embed, download, Open, popup

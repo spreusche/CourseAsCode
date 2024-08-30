@@ -1,0 +1,22 @@
+categories:
+  - category: poke-category 1
+    id: 2
+    aggregation: highest # 0-8
+    type: value #0-3
+    max: 100
+    min: 0
+    parentCat: 1 # my default. ID of the parent category
+  - category: poke-category 2
+    id: 3
+    aggregation: mode # 0-8
+    type: value #0-3
+    max: 100
+    min: 0
+    parentCat: 1
+  - category: poke-category 3
+    id: 4
+    aggregation: lowest # 0-8
+    type: value #0-3
+    max: 14
+    min: 1
+    parentCat: 1

@@ -1,0 +1,23 @@
+# Basic for every activity
+score: 10
+visible: true
+visibleoncoursepage: true
+showdescription: false
+
+# -- Quizz specific configs
+
+timeopen: 21-11-2023 10:30 #%d-%m-%Y %H:%M
+timeclose: 22-12-2023 10:30 #%d-%m-%Y %H:%M
+timelimit: 0 # N seconds
+overduehandling: autosubmit # graceperiod, autosubmit, autoabandon
+graceperiod: 0 # N seconds, only applies if selected overduehandling is graceperiod
+preferredbehaviour: deferredfeedback # adaptive, adaptivenopenalty, deferredcbm, deferredfeedback, immediatecbm, immediatefeedback, interactive
+canredoquestions: true
+attempts_number: 1
+decimalpoints: 2
+questionsperpage: 1
+navmethod: free # free, sequential
+shuffleanswers: true
+sumgrades: 1.00000
+grade: 15.00000
+
